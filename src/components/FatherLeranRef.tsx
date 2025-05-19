@@ -1,4 +1,3 @@
-import SonLeranRef from "./SonLeranRef";
 import { useRef } from "react";
 
 function FatherLeranRef() {
@@ -8,7 +7,7 @@ function FatherLeranRef() {
   function handleClick1() {
     if (iptRef.current) {
       // 3、待 DOM 渲染完成后，获取 DOM
-      console.log(iptRef.current.value); // 可安全访问 DOM 属性
+      console.log(iptRef.current); // 可安全访问 DOM 属性
     }
   }
 
@@ -24,9 +23,6 @@ function FatherLeranRef() {
       <button onClick={handleClick1} style={{ marginTop: "15px" }}>
         获取当前组件的DOM
       </button>
-
-      {/* 子组件 */}
-      <SonLeranRef />
     </div>
   );
 }
